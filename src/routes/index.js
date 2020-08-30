@@ -8,17 +8,16 @@ import resolveRoutes from "../utils/resolveRoutes";
 const routes = {
 	"/": Home,
 	"/:id": Character,
-	"/content": "content",
+	"/about": "about",
 };
 
 const router = async () => {
 	const header = null || document.getElementById("header");
 	const content = null || document.getElementById("content");
+
 	header.innerHTML = await Header();
 	let hash = getHash();
-	console.log("hash: ", hash);
 	let route = await resolveRoutes(hash);
-	console.log("route: ", route);
 	let render = routes[route] ? routes[route] : Error404;
 	content.innerHTML = await render();
 };
