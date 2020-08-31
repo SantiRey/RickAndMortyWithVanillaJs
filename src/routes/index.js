@@ -8,7 +8,7 @@ import resolveRoutes from "../utils/resolveRoutes";
 const routes = {
 	"/": Home,
 	"/:id": Character,
-	"/about": "about",
+	"/content": "content",
 };
 
 const router = async () => {

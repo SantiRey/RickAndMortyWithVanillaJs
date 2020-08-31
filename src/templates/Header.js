@@ -8,6 +8,9 @@ const Header = () => {
 			<div class="Header-nav">
 				<a href="#/about/">about</a>
 			</div>
+			<div>
+				<a href="contact/">contact</a>
+			</div>
         </div>
         `;
 	return view;
